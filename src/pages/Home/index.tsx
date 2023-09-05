@@ -2,6 +2,8 @@ import { Play } from 'phosphor-react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as zod from 'zod'
+import { useState, useEffect } from 'react'
+import { differenceInSeconds } from 'date-fns'
 
 import {
   CountdownContainer,
@@ -12,7 +14,6 @@ import {
   StartCountdownButton,
   TaskInput,
 } from './styles'
-import { useState } from 'react'
 
 const newCycleFormValidationSchema = zod.object({
   task: zod.string().min(1, 'Informe a tarefa'),
@@ -30,12 +31,13 @@ interface Cycle {
   task: string
   minutesAmount: number
   isActive: boolean
+  startDate: Date
 }
 
 export function Home() {
   const [cycles, setCycles] = useState<Cycle[]>([])
   const [activeCycleId, setActiveCycleId] = useState<string | null>(null)
-  const [amountsSecondsPassed, setAmountsSecondsPassed] = useState(0)
+  const [amountsSecondsPassed, setAmountSecondsPassed] = useState(0)
 
   const { register, handleSubmit, watch, reset } = useForm<NewCycleFormData>({
     resolver: zodResolver(newCycleFormValidationSchema),
@@ -45,6 +47,18 @@ export function Home() {
     },
   })
 
+  const activeCycle = cycles.find((cycle) => cycle.id === activeCycleId)
+
+  useEffect(() => {
+    if (activeCycle) {
+      setInterval(() => {
+        setAmountSecondsPassed(
+          differenceInSeconds(new Date(), activeCycle.startDate),
+        )
+      }, 1000)
+    }
+  }, [activeCycle])
+
   function handleCreateNewCycle(data: NewCycleFormData) {
     const id = String(new Date().getTime())
 
@@ -52,14 +66,14 @@ export function Home() {
       id,
       task: data.task,
       minutesAmount: data.minutesAmount,
+      isActive: false,
+      startDate: new Date(),
     }
 
     setCycles((state) => [...state, newCycle])
     setActiveCycleId(id)
     reset()
   }
-
-  const activeCycle = cycles.find((cycle) => cycle.id === activeCycleId)
 
   const totalSeconds = activeCycle ? activeCycle.minutesAmount * 60 : 0
   const currentSeconds = activeCycle ? totalSeconds - amountsSecondsPassed : 0
