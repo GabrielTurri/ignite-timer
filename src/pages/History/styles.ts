@@ -37,7 +37,7 @@ export const HistoryList = styled.div`
       }
       &:last-child {
         border-top-right-radius: 8px;
-        padding-left: 1.5rem;
+        padding-right: 1.5rem;
       }
     }
     td {
@@ -52,8 +52,7 @@ export const HistoryList = styled.div`
         padding-left: 1.5rem;
       }
       &:last-child {
-        width: 50%;
-        padding-left: 1.5rem;
+        padding-right: 1.5rem;
       }
     }
   }
