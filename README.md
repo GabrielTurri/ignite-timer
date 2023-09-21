@@ -15,11 +15,7 @@
 </div>
 
 ## About the Project
-[PT-BR] <br>
-Ignite Timer é um projeto desenvolvido durante o curso de especialização Ignite da [Rocketseat](https://github.com/rocketseat-education/), com foco em se apronfundar em alguns conceitos mais complexos do ReactJS e de ferramentas do Front-end, como contexto e reducers, rotas, entre outras funcionalidades.
-
-[ENG]<br>
-Ignite Timer is a project developed in [Rocketseat](https://github.com/rocketseat-education/)'s React.js specialization course. It is a Single Page Application using very important React frameworks and concepts.
+Ignite Timer is a project developed in [Rocketseat](https://github.com/rocketseat-education/)'s React.js specialization course. It's a Single Page Application using very important React concepts and frameworks.
 
 ## Ferramentas e frameworks utilizados
 * Typescript
