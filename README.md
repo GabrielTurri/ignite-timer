@@ -1,19 +1,64 @@
-# ignite-timer
- Ignite Timer é um projeto desenvolvido durante o curso de especialização Ignite da Rocketseat, com foco em se apronfundar em alguns conceitos mais complexos do ReactJS e de ferramentas do Front-end, como contexto e reducers, rotas, entre outras funcionalidades.
+<div align="center">
+  <img src="src/assets/logo-ignite.svg" alt="Logo" width="80" height="80">
+
+  <h3 align="center">ignite-timer</h3>
+
+  <p align="center">
+    A front-end timer project with an awesome interface
+  </p>
+  <p align="center">
+    ENG •
+    <a href="./README.ptbr.md">
+      PT-BR
+    </a>
+  </p>
+</div>
+
+## About the Project
+[PT-BR] <br>
+Ignite Timer é um projeto desenvolvido durante o curso de especialização Ignite da [Rocketseat](https://github.com/rocketseat-education/), com foco em se apronfundar em alguns conceitos mais complexos do ReactJS e de ferramentas do Front-end, como contexto e reducers, rotas, entre outras funcionalidades.
+
+[ENG]<br>
+Ignite Timer is a project developed in [Rocketseat](https://github.com/rocketseat-education/)'s React.js specialization course. It is a Single Page Application using very important React frameworks and concepts.
 
 ## Ferramentas e frameworks utilizados
-- Typescript
-- styled-components
-- ESLint
-- React Rouder DOM
-- React Hook Form
-- zod
+* Typescript
+* styled-components
+* ESLint
+* React Rouder DOM
+* React Hook Form
+* zod
+* [immer](https://immerjs.github.io/immer/)
 
-## Conhecimentos aplicados
-- Páginas e rotas
-- Components
-- Context API
-- Controlled vs Uncontrolled forms
-- Prop Drilling
-- useEffect
-- Reducers
+## Knowledges
+* Pages and Routing
+* Components
+* Context API
+* Controlled vs Uncontrolled forms
+* Prop Drilling
+* useEffect
+* Reducers
+
+## Screenshots
+![Home](src/assets/images/Home.png)
+
+
+
+### Prerequisites
+* npm
+```
+npm install npm@latest -g
+```
+### Installation
+1. Clone the repo
+```
+git clone https://github.com/gabrielturri/ignite-timer.git
+```
+2. Install NPM packages
+```
+npm install
+```
+3. Run and open on your browser
+```
+npm run dev
+```
