@@ -2,7 +2,7 @@ import { HeaderContainer } from './styles'
 import { Timer, Scroll } from 'phosphor-react'
 
 import logoIgnite from '../../assets/logo-ignite.svg'
-import { NavLink, useLocation } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 export function Header() {
   return (
