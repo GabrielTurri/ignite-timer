@@ -26,7 +26,7 @@ Ignite Timer é um projeto desenvolvido durante o Ignite, trilha do curso de esp
 * zod
 * [immer](https://immerjs.github.io/immer/)
 
-## Conhecimnetos Aplicados
+## Conhecimentos Aplicados
 * Páginas e Rotas
 * Componentização
 * Context API
@@ -37,7 +37,7 @@ Ignite Timer é um projeto desenvolvido durante o Ignite, trilha do curso de esp
 
 ## Screenshots
 ![Home](src/assets/images/Home.png)
-
+![History](src/assets/images/History.png)
 
 
 ### Pré-requisitos
